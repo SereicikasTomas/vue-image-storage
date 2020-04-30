@@ -26,4 +26,13 @@ html {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
 </style>

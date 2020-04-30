@@ -3,18 +3,32 @@
     <a href="/" class="logo">
       Im<ImageIcon class="icon" />ge Stor<ArchiveIcon class="icon" />ge
     </a>
+
+    <nav>
+      <ul>
+        <li @click="login">
+          <a href="#">
+            Login
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
 <script>
 import ArchiveIcon from "../assets/file-archive-regular.svg";
 import ImageIcon from "../assets/file-image-regular.svg";
+import { mapActions } from "vuex";
 
 export default {
   name: "AppHeader",
   components: {
     ArchiveIcon,
     ImageIcon
+  },
+  methods: {
+    ...mapActions(["login"])
   }
 };
 </script>
@@ -25,6 +39,7 @@ export default {
   min-height: 10vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 3rem 5%;
 }
 .logo {
@@ -38,5 +53,12 @@ export default {
   height: 2rem;
   color: rgb(77, 170, 201);
   margin: 0 0.2rem;
+}
+
+nav {
+  font-size: 2rem;
+  a {
+    color: rgb(77, 170, 201);
+  }
 }
 </style>
