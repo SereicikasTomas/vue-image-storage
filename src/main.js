@@ -8,8 +8,8 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: "history",
-  router: [
-    { path: "/oath2/callback", component: AuthHandler }
+  routes: [
+    { path: '/oath2/callback', component: AuthHandler }
   ]
 })
 
