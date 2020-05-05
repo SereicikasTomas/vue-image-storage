@@ -1,19 +1,19 @@
 <template>
   <div class="header">
-    <a href="/" class="logo">
+    <router-link to="/" class="logo">
       Im<ImageIcon class="icon" />ge Stor<ArchiveIcon class="icon" />ge
-    </a>
+    </router-link>
     <nav>
       <ul v-if="isLoggedIn">
         <li>
-          <a href="#">
+          <router-link to="/">
             Galleries
-          </a>
+          </router-link>
         </li>
         <li>
-          <a href="#">
+          <router-link to="/upload">
             Upload
-          </a>
+          </router-link>
         </li>
         <li @click="logout">
           <a href="#">
