@@ -4,13 +4,25 @@
       Im<ImageIcon class="icon" />ge Stor<ArchiveIcon class="icon" />ge
     </a>
     <nav>
-      <ul>
-        <li v-if="isLoggedIn" @click="login">
+      <ul v-if="isLoggedIn">
+        <li>
+          <a href="#">
+            Galleries
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Upload
+          </a>
+        </li>
+        <li @click="logout">
           <a href="#">
             Logout
           </a>
         </li>
-        <li v-else @click="login">
+      </ul>
+      <ul v-else>
+        <li @click="login">
           <a href="#">
             Login
           </a>
@@ -31,7 +43,7 @@ export default {
     ArchiveIcon,
     ImageIcon
   },
-  methods: mapActions(["login"]),
+  methods: mapActions(["login", "logout"]),
   computed: mapGetters(["isLoggedIn"])
 };
 </script>
@@ -60,6 +72,12 @@ export default {
 
 nav {
   font-size: 2rem;
+  ul {
+    display: flex;
+    li:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
   a {
     color: rgb(77, 170, 201);
   }
