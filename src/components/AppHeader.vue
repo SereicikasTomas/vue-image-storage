@@ -3,7 +3,7 @@
     <a href="/" class="logo">
       Im<ImageIcon class="icon" />ge Stor<ArchiveIcon class="icon" />ge
     </a>
-
+    {{ isLoggedIn }}
     <nav>
       <ul>
         <li @click="login">
@@ -19,7 +19,7 @@
 <script>
 import ArchiveIcon from "../assets/file-archive-regular.svg";
 import ImageIcon from "../assets/file-image-regular.svg";
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "AppHeader",
@@ -27,9 +27,8 @@ export default {
     ArchiveIcon,
     ImageIcon
   },
-  methods: {
-    ...mapActions(["login"])
-  }
+  methods: mapActions(["login"]),
+  computed: mapGetters(["isLoggedIn"])
 };
 </script>
 
