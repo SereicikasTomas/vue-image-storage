@@ -75,7 +75,7 @@ nav {
   ul {
     display: flex;
     li:not(:first-child) {
-      margin-left: 30px;
+      margin-left: 3rem;
     }
   }
   a {
