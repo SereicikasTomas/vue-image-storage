@@ -3,10 +3,14 @@
     <a href="/" class="logo">
       Im<ImageIcon class="icon" />ge Stor<ArchiveIcon class="icon" />ge
     </a>
-    {{ isLoggedIn }}
     <nav>
       <ul>
-        <li @click="login">
+        <li v-if="isLoggedIn" @click="login">
+          <a href="#">
+            Logout
+          </a>
+        </li>
+        <li v-else @click="login">
           <a href="#">
             Login
           </a>
