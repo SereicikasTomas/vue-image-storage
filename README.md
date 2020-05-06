@@ -1,6 +1,10 @@
 # images
 
-Second Vue.js project
+Second Vue.js project using imgur api to login user, fetch and upload images.
+
+## Project Screenshot
+
+![screenshot](Screenshot.png)
 
 ## Project setup
 
