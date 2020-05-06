@@ -1,7 +1,9 @@
 <template>
   <div>
     <AppHeader></AppHeader>
-    <router-view></router-view>
+    <div class="view">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -35,5 +37,9 @@ ul {
 a {
   text-decoration: none;
   color: black;
+}
+
+.view {
+  margin: 5%;
 }
 </style>
