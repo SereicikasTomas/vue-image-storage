@@ -1,13 +1,21 @@
 <template>
   <div>
-    <input type="file" />
+    <input
+      type="file"
+      @change="uploadImages($event.target.files)"
+      multiple
+      accept="image/*"
+    />
     <span>Drag files here to upload an image.</span>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
-  name: "UploadForm"
+  name: "UploadForm",
+  methods: mapActions(["uploadImages"])
 };
 </script>
 
