@@ -1,6 +1,7 @@
 # images
 
 Second Vue.js project using imgur api to login user, fetch and upload images.
+Unfortunately it only works on localhost:8080 because of how the imgur API is designed to work.
 
 ## Project Screenshot
 
